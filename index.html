@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFPEM - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --usac-guinda: #7d2027; 
+            --usac-tan: #c2a385;
+            --usac-gris-oscuro: #555555;
+            --usac-gris-claro: #d6d2d2;
+        }
+        
+        body { font-family: Arial, sans-serif; }
+
+        .bg-usac { background-color: var(--usac-guinda) !important; }
+        .text-usac { color: var(--usac-guinda) !important; }
+        
+        /* Navegación */
+        .nav-link { color: white !important; padding: 10px 20px !important; }
+        .nav-link.active { background-color: rgba(255,255,255,0.2); font-weight: bold; }
+        
+        /* Slider */
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        /* Bloques de Información Inferiores */
+        .info-container { 
+            min-height: 250px; 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            padding: 30px; 
+            position: relative; 
+        }
+        .bg-estudiantes { background-color: var(--usac-gris-claro); color: black; }
+        .bg-padep { background-color: var(--usac-gris-oscuro); }
+        .bg-online { background-color: var(--usac-guinda); }
+        .bg-economico { background-color: var(--usac-tan); }
+        
+        .flecha-link { 
+            position: absolute; 
+            bottom: 20px; 
+            right: 20px; 
+            font-size: 1.8rem; 
+            text-decoration: none; 
+            color: inherit; 
+            font-weight: bold;
+        }
+
+        .footer { background-color: var(--usac-guinda); color: white; padding: 25px 0; text-align: center; }
+        
+        /* Ajuste para móvil < 768px */
+        @media (max-width: 767.98px) {
+            .carousel-item img { height: 250px; }
+            .info-container { min-height: 200px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container d-flex justify-content-between align-items-center py-3">
+        <img src="img/logo-efpem.png" alt="Logo EFPEM" style="height: 80px;">
+        <img src="img/logo-usac.png" alt="Logo USAC" style="height: 80px;">
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-usac p-0">
+        <div class="container">
+            <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="informacion.html">Información</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container d-flex justify-content-end my-3">
+        <a href="https://www.facebook.com/efpemusac" target="_blank" class="text-primary fs-2 mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/usacenlinea" target="_blank" class="text-info fs-2 mx-2"><i class="bi bi-twitter"></i></a>
+        <a href="mailto:info@efpem.usac.edu.gt" class="text-warning fs-2 mx-2"><i class="bi bi-envelope-at-fill"></i></a>
+    </div>
+
+    <div id="efpemSlider" class="carousel slide container mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#efpemSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#efpemSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#efpemSlider" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#efpemSlider" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#efpemSlider" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner border">
+            <div class="carousel-item active"><img src="img/fachada-efpem.png" class="d-block w-100" alt="Slider 1"></div>
+            <div class="carousel-item"><img src="img/graduandos-efpem.png" class="d-block w-100" alt="Slider 2"></div>
+            <div class="carousel-item"><img src="img/estudiantes-en-actividades.png" class="d-block w-100" alt="Slider 3"></div>
+            <div class="carousel-item"><img src="img/estudiantes-padep.png" class="d-block w-100" alt="Slider 4"></div>
+            <div class="carousel-item"><img src="img/graduandos-efpem-2026.png" class="d-block w-100" alt="Slider 5"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#efpemSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#efpemSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="border p-4 h-100 text-center">
+                    <h3 class="fw-bold">Misión</h3>
+                    <p>Somos una Escuela no facultativa, comprometida a trabajar conjuntamente y en forma responsable, con ética, y apegadas a valores morales e institucionales, para el desarrollo integral en la formación de profesores en los distintos niveles educativos del sistema nacional.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border p-4 h-100 text-center">
+                    <h3 class="fw-bold">Visión</h3>
+                    <p>Proyectarnos como una unidad académica acreditada internacionalmente, a la vanguardia de la investigación, docencia y extensión, que responde con pertinencia y compromiso social a las necesidades educativas, tecnológicas y culturales de Guatemala.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-md-3 info-container bg-estudiantes">
+                <h3 class="fw-bold">Información para Estudiantes</h3>
+                <a href="informacion.html" class="flecha-link">></a>
+            </div>
+            <div class="col-md-3 info-container bg-padep">
+                <h3 class="fw-bold">PADEP</h3>
+                <p>Programa de formación universitaria para el personal docente en servicio del sector oficial.</p>
+                <a href="#" class="flecha-link">></a>
+            </div>
+            <div class="col-md-3 info-container bg-online">
+                <h3 class="fw-bold">Programa Online</h3>
+                <p>Acceso a plataformas virtuales y recursos educativos para el aprendizaje a distancia.</p>
+                <a href="#" class="flecha-link">></a>
+            </div>
+            <div class="col-md-3 info-container bg-economico">
+                <h3 class="fw-bold">Programa Económico Preparatorio</h3>
+                <p>Preparación para estudiantes de nivel medio para su ingreso a la USAC.</p>
+                <a href="#" class="flecha-link">></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="mb-1 fw-bold">Id y Enseñad a Todos</p>
+        <p class="mb-0">2026 Escuela de Formación de Profesores de Enseñanza Media - EFPEM</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
